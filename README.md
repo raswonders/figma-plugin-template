@@ -28,4 +28,10 @@ degit <your-github-username>/figma-plugin-template my-figma-plugin
 degit <your-github-username>/figma-plugin-template#tailwindcss my-figma-plugin
 
 cd my-figma-plugin
+npm i
+```
+To start developing, open dev server: 
+
+```bash
+npm run dev
 ```
