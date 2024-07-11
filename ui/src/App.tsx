@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <h1 className="underline">Figma plugin template</h1>
-      <button onClick={onClick}>say hello</button>
+      <h1 className="text-3xl">Figma plugin template</h1>
+      <button className="border rounded p-1 mt-2"onClick={onClick}>say hello</button>
     </>
   );
 }
