@@ -11,7 +11,7 @@
     "tsc:ui": "tsc --noEmit -p ui",
     "tsc:watch": "concurrently -n widget,iframe \"npm run tsc:plugin -- --watch --preserveWatchOutput\" \"npm run tsc:ui -- --watch --preserveWatchOutput\"",
     "build": "npm run build:ui && npm run build:plugin -- --minify",
-    "build:plugin": "esbuild plugin/src/code.ts --bundle --outfile=dist/code.js",
+    "build:plugin": "esbuild plugin/src/code.ts --bundle --outfile=dist/code.js --target=es6",
     "build:ui": "npx vite build --minify esbuild --emptyOutDir=false",
     "build:watch": "concurrently -n widget,iframe \"npm run build:plugin -- --watch\" \"npm run build:ui -- --watch\"",
     "dev": "concurrently -n tsc,build,vite 'npm:tsc:watch' 'npm:build:watch' 'vite'"
@@ -21,6 +21,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@figma/eslint-plugin-figma-plugins": "^0.15.0",
     "@figma/plugin-typings": "^1.97.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
